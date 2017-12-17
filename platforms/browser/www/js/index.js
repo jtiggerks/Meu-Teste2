@@ -32,7 +32,7 @@ var app = {
 
    alert('iniciando o banner');
         AdMob.createBanner({
-            adId : "ca-app-pub-6833525801886116~6338063942",
+            adId : "ca-app-pub-3940256099942544/6300978111",
             position : AdMob.AD_POSITION.BOTTOM_CENTER,
             autoShow : true
         });
