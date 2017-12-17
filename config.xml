@@ -50,7 +50,11 @@
  
  
     <access origin="*" />
+    <access origin="http://www.zemerson.com.br/" />
+
+
     <allow-intent href="http://*/*" />
+    <allow-intent href="http://www.zemerson.com.br" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
