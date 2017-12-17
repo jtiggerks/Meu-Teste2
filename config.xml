@@ -34,8 +34,8 @@
 
 
     <plugin name="cordova-plugin-admobpro" source="npm"/> 
-
-
+    <dependency id="cordova-plugin-googleplayservices"/>
+    
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />

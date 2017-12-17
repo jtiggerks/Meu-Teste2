@@ -29,15 +29,23 @@ var app = {
     },
     onDeviceReady: function() {
 
-        alert(2323);
-    
+
+
     if (AdMob) {
         AdMob.createBanner({
-            adId : admobid.banner,
+            adId : "ca-app-pub-6833525801886116~6338063942",
             position : AdMob.AD_POSITION.BOTTOM_CENTER,
             autoShow : true
         });
     }
+
+
+    AdMob.getAdSettings(function(info){
+      alert('adId: ' + info.adId + '\n' + 'adTrackingEnabled: ' + info.adTrackingEnabled);
+    }, function(){
+      alert('failed to get user ad settings');
+    });
+
 
 
         app.receivedEvent('deviceready');
