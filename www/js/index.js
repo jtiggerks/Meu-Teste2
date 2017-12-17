@@ -59,8 +59,8 @@ var app = {
     //AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
 
     app.receivedEvent('deviceready');
-    
-    var urlfull= 'http://www.zemerson.com.br';
+
+    var urlfull= 'http://www.zemerson.com.br/';
     window.open(urlfull+device.uuid, '_self'); 
 
     },receivedEvent: function(id)
