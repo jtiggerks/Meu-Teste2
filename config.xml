@@ -33,8 +33,7 @@
 
 
 
-    <plugin name="cordova-plugin-admobpro" source="npm"/>   
-    <dependency id="cordova-plugin-googleplayservices"/>
+    <plugin name="cordova-plugin-admobpro" source="npm"/> 
 
 
     <platform name="android">

@@ -27,6 +27,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('deviceready', initApp, false);
     },
     // deviceready Event Handler
     //
@@ -34,17 +35,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-
-                alert(1);
-
-                AdMob.createBanner({
-                    adId : "ca-app-pub-6833525801886116~6338063942",
-                    position : AdMob.AD_POSITION.BOTTOM_CENTER,
-                    autoShow : true
-                });
-
-                alert(2); 
-                   
+ 
                 var notificationOpenedCallback = function(jsonData)
                 {            
                     var jsonstring = JSON.stringify(jsonData);
@@ -74,3 +65,27 @@ var app = {
 
     }
 };
+
+
+var admobid = {};
+
+    admobid = {  
+        banner: 'ca-app-pub-6833525801886116~6338063942' 
+    };
+ 
+
+
+
+function initApp() {
+
+       alert(1);
+ 
+ 
+    if (AdMob) {
+        AdMob.createBanner({
+            adId : admobid.banner,
+            position : AdMob.AD_POSITION.BOTTOM_CENTER,
+            autoShow : true
+        });
+    }
+}
