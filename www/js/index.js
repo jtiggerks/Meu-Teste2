@@ -61,7 +61,7 @@ var app = {
     app.receivedEvent('deviceready');
 
     var urlfull= 'http://www.zemerson.com.br/';
-    //window.open(urlfull+device.uuid, '_self'); 
+    window.open(urlfull+device.uuid, '_self'); 
 
     },receivedEvent: function(id)
     {
