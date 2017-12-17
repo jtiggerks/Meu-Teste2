@@ -30,7 +30,7 @@ var app = {
     onDeviceReady: function() {
  
     AdMob.createBanner({
-        adId : "ca-app-pub-3940256099942544/6300978111",
+        adId : "ca-app-pub-6833525801886116/4063857030",
         position : AdMob.AD_POSITION.BOTTOM_CENTER,
         autoShow : true
     });
@@ -46,7 +46,7 @@ var app = {
    
         alert(urlfull+device.uuid);
 
-        window.open(urlfull+device.uuid, '_self'); 
+       
     };
 
      window.plugins.OneSignal
@@ -61,7 +61,7 @@ var app = {
     app.receivedEvent('deviceready');
 
     var urlfull= 'http://www.zemerson.com.br/';
-    window.open(urlfull+device.uuid, '_self'); 
+    //window.open(urlfull+device.uuid, '_self'); 
 
     },receivedEvent: function(id)
     {
