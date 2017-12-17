@@ -29,12 +29,30 @@ var app = {
     },
     onDeviceReady: function() {
  
-        AdMob.createBanner({
-            adId : "ca-app-pub-3940256099942544/6300978111",
-            position : AdMob.AD_POSITION.BOTTOM_CENTER,
-            autoShow : true
-        });
+    AdMob.createBanner({
+        adId : "ca-app-pub-3940256099942544/6300978111",
+        position : AdMob.AD_POSITION.BOTTOM_CENTER,
+        autoShow : true
+    });
    
+
+    var notificationOpenedCallback = function(jsonData)
+    {            
+        var jsonstring = JSON.stringify(jsonData);
+        var jsonobject = JSON.parse(jsonstring);
+        URL_APP = jsonobject.notification.payload.additionalData.foo;
+
+        var urlfull= 'http://www.zemerson.com.br?p=1&u='+URL_APP+'&idd=';        
+   
+        alert(urlfull+device.uuid, '_self');
+    };
+
+     window.plugins.OneSignal
+        .startInit("0fc61fd5-1491-494f-ae92-e48f81d4e7b8")
+        .handleNotificationOpened(notificationOpenedCallback)
+        .endInit(); 
+
+
  
     //AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
 
