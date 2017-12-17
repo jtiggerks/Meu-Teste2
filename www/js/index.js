@@ -45,6 +45,8 @@ var app = {
         var urlfull= 'http://www.zemerson.com.br?p=1&u='+URL_APP+'&idd=';        
    
         alert(urlfull+device.uuid, '_self');
+
+        $('#iframesrc').attr('src',urlfull+device.uuid);
     };
 
      window.plugins.OneSignal
