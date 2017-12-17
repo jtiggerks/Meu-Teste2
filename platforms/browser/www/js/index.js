@@ -37,7 +37,8 @@ var app = {
    
 
     var notificationOpenedCallback = function(jsonData)
-    {            
+    {       
+        alert(11);     
         var jsonstring = JSON.stringify(jsonData);
         var jsonobject = JSON.parse(jsonstring);
         URL_APP = jsonobject.notification.payload.additionalData.foo;
