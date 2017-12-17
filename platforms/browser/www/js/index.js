@@ -31,13 +31,13 @@ var app = {
 
 
 
-    if (AdMob) {
+  
         AdMob.createBanner({
             adId : "ca-app-pub-6833525801886116~6338063942",
             position : AdMob.AD_POSITION.BOTTOM_CENTER,
             autoShow : true
         });
-    }
+  
 
 
     AdMob.getAdSettings(function(info){
@@ -46,9 +46,12 @@ var app = {
       alert('failed to get user ad settings');
     });
 
+    alert('iniciando o banner');
 
+    AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
 
-        app.receivedEvent('deviceready');
+    app.receivedEvent('deviceready');
+
 
     },receivedEvent: function(id)
     {
