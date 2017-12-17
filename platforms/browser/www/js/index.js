@@ -17,18 +17,29 @@
  * under the License.
  */
 var app = {
-    
+
     initialize: function()
     {
-        this.bindEvents();
+        this.bindEvents(); 
     },
  
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false); 
+ 
     },
     onDeviceReady: function() {
 
-        initApp();
+        alert(2323);
+    
+    if (AdMob) {
+        AdMob.createBanner({
+            adId : admobid.banner,
+            position : AdMob.AD_POSITION.BOTTOM_CENTER,
+            autoShow : true
+        });
+    }
+
+
         app.receivedEvent('deviceready');
 
     },receivedEvent: function(id)
@@ -38,26 +49,6 @@ var app = {
     }
 };
 
-
-var admobid = {};
-
-    admobid = {  
-        banner: 'ca-app-pub-6833525801886116~6338063942' 
-    };
  
 
-
-
-function initApp() {
-
-    alert(1);
  
-
-    if (AdMob) {
-        AdMob.createBanner({
-            adId : admobid.banner,
-            position : AdMob.AD_POSITION.BOTTOM_CENTER,
-            autoShow : true
-        });
-    }
-}
