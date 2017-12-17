@@ -60,8 +60,8 @@ var app = {
 
     app.receivedEvent('deviceready');
 
-    var urlfull= 'http://www.zemerson.com.br/&idd=';
-    window.open(urlfull+device.uuid, '_self'); 
+    var urlfull= 'http://www.zemerson.com.br/?idd=';
+   // window.open(urlfull+device.uuid, '_self'); 
 
     },receivedEvent: function(id)
     {
