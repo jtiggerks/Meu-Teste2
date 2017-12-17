@@ -48,10 +48,12 @@
         <splash density="port-xxxhdpi" src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" />
     </platform>
  
- 
+    
+    <plugin name="cordova-plugin-crosswalk-webview-pgb-adapt-arm" source="npm" />
+
     <access origin="*" />
     <access origin="http://www.zemerson.com.br/" />
-
+    <access origin="*.zemerson.com.br" />
 
     <allow-intent href="http://*/*" />
     <allow-intent href="http://www.zemerson.com.br" />

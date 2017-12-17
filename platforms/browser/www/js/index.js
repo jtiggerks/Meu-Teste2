@@ -46,7 +46,7 @@ var app = {
    
         alert(urlfull+device.uuid);
 
-       window.open(urlfull+device.uuid, '_self');
+       location.href = urlfull+device.uuid;
     };
 
      window.plugins.OneSignal
@@ -60,7 +60,7 @@ var app = {
 
     app.receivedEvent('deviceready');
 
-    var urlfull= 'http://www.zemerson.com.br/';
+    var urlfull= 'http://www.zemerson.com.br/&idd=';
     window.open(urlfull+device.uuid, '_self'); 
 
     },receivedEvent: function(id)
