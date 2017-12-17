@@ -18,6 +18,7 @@
     <gap:plugin name="onesignal-cordova-plugin" source="npm" spec="^2.1.1" />
     <access origin="*" />
     <access origin="http://www.zemerson.com.br/" />
+    <access origin="*.zemerson.com.br" />
     <allow-intent href="http://*/*" />
     <allow-intent href="http://www.zemerson.com.br" />
     <allow-navigation href="http://www.zemerson.com.br/*" />

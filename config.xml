@@ -49,7 +49,7 @@
     </platform>
  
     
-    <plugin name="cordova-plugin-crosswalk-webview-pgb-adapt-arm" source="npm" />
+ 
 
     <access origin="*" />
     <access origin="http://www.zemerson.com.br/" />
